@@ -44,7 +44,9 @@ exports.login= async(req, res, next) => {
                         req.status(500).json({success:false,message:"something went wrong"})
                     }
                     if(result===true){
+                        
                         res.status(200).json({success:true,message:"User logged in successfully"})
+                        
                     }
                     else{
                        return  res.status(400).json({success:false,message:"password is incorrect"})

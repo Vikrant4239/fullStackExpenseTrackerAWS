@@ -15,11 +15,13 @@ const app = express();
 
 app.use(cors());
 const userRoute = require('./routes/user');
+const expensRoute = require('./routes/expense');
 
 app.use(bodyParser.json({ extended: false }));
 
 
 app.use(userRoute);
+app.use(expensRoute);
 
 
 

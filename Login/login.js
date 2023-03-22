@@ -13,6 +13,7 @@ async function login(e){
       const response = await axios.post('http://localhost:4000/user/login',loginDetails)
       if(response.status===200){
          alert(response.data.message);
+         window.location.href="../expenses/expense.html";
       }
       
  
